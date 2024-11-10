@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Health Check-Up</title>
+  <style>
+    /* General styles for body */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header styling */
+    header {
+      background-color: #02768a;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    /* Main content section */
+    .main-content {
+      padding: 20px;
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    .form-container h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      color: #02768a;
+    }
+
+    label {
+      display: block;
+      margin: 8px 0;
+      font-weight: bold;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"], input[type="date"] {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #02768a;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #005f5f;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #02768a;
+      color: white;
+      margin-top: 20px;
+    }
+
+    .footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      .form-container {
+        padding: 15px;
+        margin: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Book Health Check-Up</h1>
+    <p>Fill out the form below to schedule your health check-up.</p>
+  </header>
+
+  <!-- Main Content Section -->
+  <div class="main-content">
+
+    <!-- Form Container -->
+    <div class="form-container">
+      <h2>Health Check-Up Booking Form</h2>
+
+      <!-- Booking Form -->
+      <form action="#" method="POST" id="checkup-form">
+
+        <!-- Name Field -->
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+        <!-- Email Field -->
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+        <!-- Phone Number -->
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+        <!-- Date Field -->
+        <label for="checkup-date">Preferred Health Check-Up Date:</label>
+        <input type="date" id="checkup-date" name="checkup-date" required>
+
+        <!-- Submit Button -->
+        <button type="submit">Book Health Check-Up</button>
+
+      </form>
+    </div>
+
+  </div> <!-- End Main Content Section -->
+
+  <!-- Footer Section -->
+  <div class="footer">
+    <p>&copy; 2024 Healtify. All rights reserved.</p>
+    <p>
+      <a href="#">Privacy Policy</a> | 
+      <a href="#">Contact Us</a> | 
+      <a href="#">Terms of Service</a>
+    </p>
+  </div>
+
+  <script>
+    // JavaScript for form validation
+    document.getElementById('checkup-form').addEventListener('submit', function(event) {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+
+      if (!name || !email || !phone) {
+        alert("Please fill out all fields before submitting the form.");
+        event.preventDefault();
+      }
+    });
+  </script>
+
+</body>
+</html>
